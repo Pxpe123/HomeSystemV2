@@ -1,0 +1,17 @@
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExtern\bin\Debug\net8.0\AssaultCubeExtern.exe
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExtern\bin\Debug\net8.0\AssaultCubeExtern.deps.json
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExtern\bin\Debug\net8.0\AssaultCubeExtern.runtimeconfig.json
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExtern\bin\Debug\net8.0\AssaultCubeExtern.dll
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExtern\bin\Debug\net8.0\AssaultCubeExtern.pdb
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExtern\bin\Debug\net8.0\swed32.dll
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExtern\obj\Debug\net8.0\AssaultCubeExtern.csproj.AssemblyReference.cache
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExtern\obj\Debug\net8.0\AssaultCubeExtern.GeneratedMSBuildEditorConfig.editorconfig
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExtern\obj\Debug\net8.0\AssaultCubeExtern.AssemblyInfoInputs.cache
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExtern\obj\Debug\net8.0\AssaultCubeExtern.AssemblyInfo.cs
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExtern\obj\Debug\net8.0\AssaultCubeExtern.csproj.CoreCompileInputs.cache
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExtern\obj\Debug\net8.0\AssaultC.AF530DCF.Up2Date
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExtern\obj\Debug\net8.0\AssaultCubeExtern.dll
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExtern\obj\Debug\net8.0\refint\AssaultCubeExtern.dll
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExtern\obj\Debug\net8.0\AssaultCubeExtern.pdb
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExtern\obj\Debug\net8.0\AssaultCubeExtern.genruntimeconfig.cache
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExtern\obj\Debug\net8.0\ref\AssaultCubeExtern.dll

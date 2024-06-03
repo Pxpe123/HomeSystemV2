@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWindowsForms>true</UseWindowsForms>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <PlatformTarget>AnyCPU</PlatformTarget>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Reference Include="AssaultCubeExternal">
+            <HintPath>..\AssaultCubeExternal\bin\Debug\net8.0\AssaultCubeExternal.dll</HintPath>
+        </Reference>
+        <Reference Include="swed32">
+          <HintPath>..\Swed\swed32.dll</HintPath>
+            <Pack>true</Pack>
+        </Reference>
+        <Reference Include="swed64">
+          <HintPath>..\Swed\swed64.dll</HintPath>
+            <Pack>true</Pack>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.7" />
+      <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.0-preview.4.24266.19" />
+      <PackageReference Include="Microsoft.Extensions.Logging" Version="9.0.0-preview.4.24266.19" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+      <PackageReference Include="swed32" Version="1.1.0" />
+      <PackageReference Include="swed64" Version="1.0.5" />
+    </ItemGroup>
+</Project>

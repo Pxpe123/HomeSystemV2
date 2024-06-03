@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "VHP2Uf/7UR2LBSdnEVHrN1UUB28UZJ/XwyWeTdlGQqHTHKTBjHCnbkGJxLH5atQxqE6MBqc+TZIAxtlaEs0X/w==",
+  "success": true,
+  "projectFilePath": "D:\\Develope\\HomeSystemV2\\PCManager\\AssaultCubeExtern\\AssaultCubeExtern.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\billy\\.nuget\\packages\\swed32\\1.1.0\\swed32.1.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,12 @@
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExternal\bin\Debug\net8.0\AssaultCubeExternal.deps.json
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExternal\bin\Debug\net8.0\AssaultCubeExternal.dll
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExternal\bin\Debug\net8.0\AssaultCubeExternal.pdb
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExternal\obj\Debug\net8.0\AssaultCubeExternal.csproj.AssemblyReference.cache
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExternal\obj\Debug\net8.0\AssaultCubeExternal.GeneratedMSBuildEditorConfig.editorconfig
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExternal\obj\Debug\net8.0\AssaultCubeExternal.AssemblyInfoInputs.cache
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExternal\obj\Debug\net8.0\AssaultCubeExternal.AssemblyInfo.cs
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExternal\obj\Debug\net8.0\AssaultCubeExternal.csproj.CoreCompileInputs.cache
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExternal\obj\Debug\net8.0\AssaultCubeExternal.dll
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExternal\obj\Debug\net8.0\refint\AssaultCubeExternal.dll
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExternal\obj\Debug\net8.0\AssaultCubeExternal.pdb
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExternal\obj\Debug\net8.0\ref\AssaultCubeExternal.dll

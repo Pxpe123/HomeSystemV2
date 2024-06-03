@@ -1,0 +1,5 @@
+D:\Develope\HomeSystemV2\PCManager\PCManager\obj\Debug\net7.0-windows\PCManager.csproj.AssemblyReference.cache
+D:\Develope\HomeSystemV2\PCManager\PCManager\obj\Debug\net7.0-windows\PCManager.GeneratedMSBuildEditorConfig.editorconfig
+D:\Develope\HomeSystemV2\PCManager\PCManager\obj\Debug\net7.0-windows\PCManager.AssemblyInfoInputs.cache
+D:\Develope\HomeSystemV2\PCManager\PCManager\obj\Debug\net7.0-windows\PCManager.AssemblyInfo.cs
+D:\Develope\HomeSystemV2\PCManager\PCManager\obj\Debug\net7.0-windows\PCManager.csproj.CoreCompileInputs.cache
