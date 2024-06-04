@@ -61,13 +61,9 @@ namespace ClassLibrary1
                 if (PlayerManager.Car != null)
                 {
                     TrainGUID = PlayerManager.Car.ID;
-
-                    // Train Cars Data
-                    if (PlayerManager.Car.frontCoupler.coupledTo != null)
-                    {
-                        string FrontCoupledGUID = PlayerManager.Car.frontCoupler.coupledTo.train.ID;
-
                         trainData = new Dictionary<string, Dictionary<string, object>>();
+                        
+                        Log(trainData);
 
                         foreach (TrainCar trainCar in PlayerManager.Car.trainset.cars)
                         {
@@ -98,11 +94,6 @@ namespace ClassLibrary1
                             prevTrainData = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, object>>>(trainDataJson);
                         }
                     }
-                    else
-                    {
-                        Log("Not Coupled");
-                    }
-                }
                 else
                 {
                     LogWarning("PlayerManager.Car is null. Make sure it is properly initialized.");
@@ -139,7 +130,7 @@ namespace ClassLibrary1
 
                 string CarID = PlayerManager.Car.ID;
                 //Log(PlayerManager.Car.TelemetryRecorder.ToString());
-                await Task.Delay(5500);
+                await Task.Delay(5000);
             }
         }
 
