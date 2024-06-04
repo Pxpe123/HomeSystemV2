@@ -1,0 +1,68 @@
+:root {
+  --base-font-size: 16px;
+  --small-font-size: calc(var(--base-font-size) * 0.8);
+  --medium-font-size: var(--base-font-size);
+  --large-font-size: calc(var(--base-font-size) * 1.2);
+  --xlarge-font-size: calc(var(--base-font-size) * 1.5);
+
+  --font-family-primary: "Arial", sans-serif;
+  --font-family-secondary: "Roboto", sans-serif;
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --line-height-normal: 1.5;
+  --line-height-condensed: 1.2;
+}
+
+.dark-mode {
+  --background-color: #101010;
+  --text-color: #ffffff;
+}
+
+.light-mode {
+  --background-color: #a9a9a9;
+  --text-color: #000000;
+}
+
+.accent-red {
+  --accent-color: #ff0000;
+  --accent-color-opacity: #ff000081;
+}
+
+.accent-blue {
+  --accent-color: #0055ff;
+  --accent-color-opacity: #0055ff81;
+}
+
+.accent-green {
+  --accent-color: #00ff00;
+  --accent-color-opacity: #00ff0081;
+}
+
+.accent-yellow {
+  --accent-color: #ffff00;
+  --accent-color-opacity: #ffff0081;
+}
+
+.accent-purple {
+  --accent-color: #800080;
+  --accent-color-opacity: #80008081;
+}
+
+.accent-orange {
+  --accent-color: #ff8c00;
+  --accent-color-opacity: #ff8c0081;
+}
+
+.accent-cyan {
+  --accent-color: #00ffff;
+  --accent-color-opacity: #00ffff81;
+}
+
+.accent-pink {
+  --accent-color: #ff69b4;
+  --accent-color-opacity: #ff69b481;
+}

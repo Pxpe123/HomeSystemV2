@@ -22,7 +22,7 @@ namespace PCManager
             _httpClient = new HttpClient();
         }
 
-        [HttpPost]
+        [HttpGet]
         public IActionResult Get([FromBody] JsonElement requestData)
         {
             return LogRequest("GET", requestData);
@@ -131,7 +131,6 @@ namespace PCManager
             if (response.IsSuccessStatusCode)
             {
                 string responseData = await response.Content.ReadAsStringAsync();
-                // Return the fetched data as the response
                 return Ok(responseData);
             }
             else

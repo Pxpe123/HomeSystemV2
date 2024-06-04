@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "lZSX8bzRkXJ3W36DJifb9ryG/qkxHWk/Z0Qgb2aRxo/r5/ktfHvhclh3pbKJDQTJPzfTsdB4rZRPWLWZkJbrBA==",
+  "dgSpecHash": "yeouq9BoHPPAhGcC3g0jEd516v4M9zgFpIfXvo5BR45MUynQvuZloNV7anOAJn5+kmhDqmWDtg9Y/ZYhCf3rGw==",
   "success": true,
   "projectFilePath": "D:\\Develope\\HomeSystemV2\\PCManager\\PCManager\\PCManager.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\billy\\.nuget\\packages\\microsoft.aspnetcore.cors\\2.2.0\\microsoft.aspnetcore.cors.2.2.0.nupkg.sha512",
     "C:\\Users\\billy\\.nuget\\packages\\microsoft.aspnetcore.hosting\\2.2.7\\microsoft.aspnetcore.hosting.2.2.7.nupkg.sha512",
     "C:\\Users\\billy\\.nuget\\packages\\microsoft.aspnetcore.hosting.abstractions\\2.2.0\\microsoft.aspnetcore.hosting.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\billy\\.nuget\\packages\\microsoft.aspnetcore.hosting.server.abstractions\\2.2.0\\microsoft.aspnetcore.hosting.server.abstractions.2.2.0.nupkg.sha512",

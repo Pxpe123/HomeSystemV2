@@ -1,0 +1,35 @@
+.Footer-Container {
+  display: flex; /* Make children align in a row */
+  justify-content: space-between; /* Distribute children evenly along the main axis */
+  align-items: center; /* Center children vertically */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--background-color);
+}
+
+.AndroidButton-Div {
+  height: 100%;
+  aspect-ratio: 1/1;
+  margin-left: 2.5%;
+}
+
+.AndroidButton-Activity-Div {
+  height: 100%;
+  width: 30%;
+  margin-left: -28%;
+}
+
+.AndroidButton-Notify-Div {
+  height: 100%;
+  aspect-ratio: 1/1;
+  background-color: pink;
+  margin-right: -5%;
+}
+
+.Time-Div {
+  height: 100%;
+  aspect-ratio: 2/1;
+  background-color: purple;
+  margin-left: -25%;
+}
