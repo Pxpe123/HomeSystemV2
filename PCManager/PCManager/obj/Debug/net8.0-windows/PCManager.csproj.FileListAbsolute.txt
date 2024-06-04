@@ -62,3 +62,4 @@ D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\runtimes\w
 D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\appsettings.json
 D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+D:\Develope\HomeSystemV2\PCManager\PCManager\obj\Debug\net8.0-windows\PCManager.sourcelink.json

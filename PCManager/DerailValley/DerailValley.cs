@@ -3,50 +3,50 @@ using Swed64;
 
 namespace DerailValley
 {
-    public partial class AssaultCubeMain
+    public partial class DerailValley
     {
-        public PlayerFunctions PlayerFunctions { get; private set; }
-        private Swed swed32;
-        public Vars Vars = new Vars(); // Initialize the Vars field
-        private IntPtr moduleBase;
-        private bool isRunning; // Flag to control the while loop
 
+        private readonly HttpClient httpClient;
 
-        public AssaultCubeMain()
+        public DerailValley()
         {
-            swed32 = new Swed("ac_client");
-            moduleBase = swed32.GetModuleBase("ac_client.exe");
+            httpClient = new HttpClient();
         }
+
+        public async Task UpdateData()
+        {
+            try
+            {
+                string url = "http://localhost:30152/";
+                HttpResponseMessage response = await httpClient.GetAsync(url);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string responseData = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine(responseData);
+                }
+                else
+                {
+                    Console.WriteLine($"Failed to fetch data. Status code: {response.StatusCode}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+        }
+        
+        private bool isRunning;
+        
         
         public void Start()
         {
-            isRunning = true;
-            
-            while (isRunning)
-            {
-
-                Thread.Sleep(5);
-            }
         }
-
+    
+        
         public void End()
         {
             isRunning = false;
-        }
-        
-        
-        public static IntPtr DereferencePointer(IntPtr baseAddress, int[] offsets, Swed swed)
-        {
-            IntPtr currentPointer = baseAddress;
-            Console.WriteLine("Base Address: " + currentPointer);
-
-            for (int i = 0; i < offsets.Length; i++)
-            {
-                currentPointer = (IntPtr)(swed.ReadInt((nint)(long)currentPointer) + offsets[i]);
-                Console.WriteLine($"After offset {offsets[i]}, pointer is: " + currentPointer);
-            }
-
-            return currentPointer;
         }
     }
 }

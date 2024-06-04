@@ -10,17 +10,13 @@ namespace AssaultCubeExternal
         public Vars Vars = new Vars(); // Initialize the Vars field
         private IntPtr moduleBase;
         private bool isRunning; // Flag to control the while loop
-
-
-        public AssaultCubeMain()
+        
+        public void Start()
         {
             swed32 = new Swed("ac_client");
             moduleBase = swed32.GetModuleBase("ac_client.exe");
             PlayerFunctions = new PlayerFunctions(swed32, moduleBase);
-        }
-        
-        public void Start()
-        {
+            
             isRunning = true;
             
             while (isRunning)

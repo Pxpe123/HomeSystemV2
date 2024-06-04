@@ -53,6 +53,7 @@ namespace PCManager
             {
                 var processes = Process.GetProcesses();
                 var acClient = processes.FirstOrDefault(p => p.ProcessName.Equals("ac_client", StringComparison.OrdinalIgnoreCase));
+                var derailValley = processes.FirstOrDefault(p => p.ProcessName.Equals("DerailValley", StringComparison.OrdinalIgnoreCase));
                 var gta5 = processes.FirstOrDefault(p => p.ProcessName.Equals("gta5", StringComparison.OrdinalIgnoreCase));
 
                 if (acClient != null && !Vars.assaultCubeInjected)
@@ -69,6 +70,18 @@ namespace PCManager
                     Console.WriteLine("GameClosed");
                 }
 
+                if (derailValley != null && !Vars.derailValleyInjected)
+                {
+                    Vars.derailValleyInjected = true;
+                    Console.WriteLine("derailValley is running");
+                }
+                
+                if (derailValley == null && Vars.derailValleyInjected)
+                {
+                    Vars.derailValleyInjected = false;
+                    Console.WriteLine("GameClosed");
+                }
+                
                 if (gta5 != null)
                 {
                     Console.WriteLine("gta5 is running");

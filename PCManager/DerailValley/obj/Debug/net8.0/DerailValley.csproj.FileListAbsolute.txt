@@ -1,0 +1,13 @@
+D:\Develope\HomeSystemV2\PCManager\DerailValley\bin\Debug\net8.0\DerailValley.deps.json
+D:\Develope\HomeSystemV2\PCManager\DerailValley\bin\Debug\net8.0\DerailValley.dll
+D:\Develope\HomeSystemV2\PCManager\DerailValley\bin\Debug\net8.0\DerailValley.pdb
+D:\Develope\HomeSystemV2\PCManager\DerailValley\obj\Debug\net8.0\DerailValley.csproj.AssemblyReference.cache
+D:\Develope\HomeSystemV2\PCManager\DerailValley\obj\Debug\net8.0\DerailValley.GeneratedMSBuildEditorConfig.editorconfig
+D:\Develope\HomeSystemV2\PCManager\DerailValley\obj\Debug\net8.0\DerailValley.AssemblyInfoInputs.cache
+D:\Develope\HomeSystemV2\PCManager\DerailValley\obj\Debug\net8.0\DerailValley.AssemblyInfo.cs
+D:\Develope\HomeSystemV2\PCManager\DerailValley\obj\Debug\net8.0\DerailValley.csproj.CoreCompileInputs.cache
+D:\Develope\HomeSystemV2\PCManager\DerailValley\obj\Debug\net8.0\DerailValley.sourcelink.json
+D:\Develope\HomeSystemV2\PCManager\DerailValley\obj\Debug\net8.0\DerailValley.dll
+D:\Develope\HomeSystemV2\PCManager\DerailValley\obj\Debug\net8.0\refint\DerailValley.dll
+D:\Develope\HomeSystemV2\PCManager\DerailValley\obj\Debug\net8.0\DerailValley.pdb
+D:\Develope\HomeSystemV2\PCManager\DerailValley\obj\Debug\net8.0\ref\DerailValley.dll

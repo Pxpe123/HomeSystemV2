@@ -1,0 +1,64 @@
+const data = [
+  {
+    Key: "CFF452",
+    Value: {
+      TrainGUID: "CFF452",
+      FrontCoupler: { AirCock: true },
+      RearCoupler: { AirCock: false },
+    },
+  },
+  {
+    Key: "CFF409",
+    Value: {
+      TrainGUID: "CFF409",
+      FrontCoupler: { AirCock: true },
+      RearCoupler: { AirCock: true },
+    },
+  },
+  {
+    Key: "CFF100",
+    Value: {
+      TrainGUID: "CFF100",
+      FrontCoupler: { AirCock: true },
+      RearCoupler: { AirCock: true },
+    },
+  },
+  {
+    Key: "L-007",
+    Value: {
+      TrainGUID: "L-007",
+      FrontCoupler: { AirCock: true },
+      RearCoupler: { AirCock: true },
+    },
+  },
+  {
+    Key: "CFF398",
+    Value: {
+      TrainGUID: "CFF398",
+      FrontCoupler: { AirCock: true },
+      RearCoupler: { AirCock: true },
+    },
+  },
+  {
+    Key: "CFF983",
+    Value: {
+      TrainGUID: "CFF983",
+      FrontCoupler: { AirCock: true },
+      RearCoupler: { AirCock: true },
+    },
+  },
+  {
+    Key: "CFF895",
+    Value: {
+      TrainGUID: "CFF895",
+      FrontCoupler: { AirCock: false },
+      RearCoupler: { AirCock: true },
+    },
+  },
+];
+
+const divs = data
+  .map((item) => `<div>${item.Value.TrainGUID}</div>`)
+  .join(" + ");
+
+console.log(divs);

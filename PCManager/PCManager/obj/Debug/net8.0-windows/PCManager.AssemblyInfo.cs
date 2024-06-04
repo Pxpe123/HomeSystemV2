@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PCManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6041c494353bb82bc2e5ec6fee9bd96a4f7b80c6")]
 [assembly: System.Reflection.AssemblyProductAttribute("PCManager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PCManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

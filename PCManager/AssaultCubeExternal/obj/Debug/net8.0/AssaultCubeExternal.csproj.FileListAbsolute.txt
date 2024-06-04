@@ -10,3 +10,4 @@ D:\Develope\HomeSystemV2\PCManager\AssaultCubeExternal\obj\Debug\net8.0\AssaultC
 D:\Develope\HomeSystemV2\PCManager\AssaultCubeExternal\obj\Debug\net8.0\refint\AssaultCubeExternal.dll
 D:\Develope\HomeSystemV2\PCManager\AssaultCubeExternal\obj\Debug\net8.0\AssaultCubeExternal.pdb
 D:\Develope\HomeSystemV2\PCManager\AssaultCubeExternal\obj\Debug\net8.0\ref\AssaultCubeExternal.dll
+D:\Develope\HomeSystemV2\PCManager\AssaultCubeExternal\obj\Debug\net8.0\AssaultCubeExternal.sourcelink.json

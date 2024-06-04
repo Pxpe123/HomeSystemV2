@@ -2,7 +2,9 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Text.Json;
+using System.Threading.Tasks;
 using AssaultCubeExternal;
 
 namespace PCManager
@@ -12,10 +14,12 @@ namespace PCManager
     public class LoggingController : ControllerBase
     {
         private readonly AssaultCubeMain _assaultCubeExternal;
+        private readonly HttpClient _httpClient;
 
         public LoggingController(AssaultCubeMain assaultCubeExternal)
         {
             _assaultCubeExternal = assaultCubeExternal;
+            _httpClient = new HttpClient();
         }
 
         [HttpPost]
@@ -56,6 +60,14 @@ namespace PCManager
                 if (type.GetString() == "Game")
                 {
                     return HandleGamePut(requestData);
+                }
+            }
+
+            if (requestData.TryGetProperty("GetData", out JsonElement game))
+            {
+                if (game.GetString() == "DerailValley")
+                {
+                    return GetDerailValleyDataAsync().Result; // Wait synchronously for the task to complete
                 }
             }
 
@@ -110,5 +122,24 @@ namespace PCManager
                     return BadRequest("Invalid Value");
             }
         }
+
+        private async Task<IActionResult> GetDerailValleyDataAsync()
+        {
+            string url = "http://localhost:30152/";
+            HttpResponseMessage response = await _httpClient.GetAsync(url);
+
+            if (response.IsSuccessStatusCode)
+            {
+                string responseData = await response.Content.ReadAsStringAsync();
+                // Return the fetched data as the response
+                return Ok(responseData);
+            }
+            else
+            {
+                return StatusCode((int)response.StatusCode, $"Failed to fetch data. Status code: {response.StatusCode}");
+            }
+        }
+
+
     }
 }

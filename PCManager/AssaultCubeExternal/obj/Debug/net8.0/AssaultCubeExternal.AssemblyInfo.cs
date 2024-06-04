@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AssaultCubeExternal")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+154b35fe048b4505604ac4258b324e4a7f5f9c29")]
 [assembly: System.Reflection.AssemblyProductAttribute("AssaultCubeExternal")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AssaultCubeExternal")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
