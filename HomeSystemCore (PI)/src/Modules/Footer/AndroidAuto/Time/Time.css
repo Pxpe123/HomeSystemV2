@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+.Time-Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+.Time-Time,
+.Time-Date {
+  color: var(--text-color);
+  white-space: nowrap;
+  margin: 0px 0;
+}
+
+.Time-Time {
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.Time-Date {
+  font-size: 13px;
+  font-weight: 400;
+}

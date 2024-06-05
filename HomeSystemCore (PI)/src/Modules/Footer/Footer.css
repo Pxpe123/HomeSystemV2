@@ -23,13 +23,12 @@
 .AndroidButton-Notify-Div {
   height: 100%;
   aspect-ratio: 1/1;
-  background-color: pink;
   margin-right: -5%;
 }
 
 .Time-Div {
+  margin-right: 1.5%;
   height: 100%;
   aspect-ratio: 2/1;
-  background-color: purple;
   margin-left: -25%;
 }
