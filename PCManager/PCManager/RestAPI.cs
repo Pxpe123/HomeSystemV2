@@ -111,6 +111,7 @@ namespace PCManager
                     return Ok("Infinite Ammo toggled");
                 case "GodMode":
                     _assaultCubeExternal.Vars.ToggleGodMode();
+                    Console.WriteLine(_assaultCubeExternal.Vars.bGodMode);
                     return Ok("God Mode toggled");
                 case "RefillHealth":
                     _assaultCubeExternal.PlayerFunctions.FillArmourHealth();

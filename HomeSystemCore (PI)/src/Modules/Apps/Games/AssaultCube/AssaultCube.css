@@ -1,0 +1,59 @@
+.AssaultCube-Container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.AssaultCube-Container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url("./resource/background.jpg");
+  filter: blur(2px);
+  z-index: 1;
+}
+
+.AssaultCube-Data-Container,
+.AssaultCube-Cheat-Container {
+  position: relative;
+  background-color: #000000cc;
+  z-index: 2;
+}
+
+.AssaultCube-Data-Container {
+  width: 100%;
+  height: 70%;
+}
+
+.AssaultCube-Cheat-Container {
+  width: 100%;
+  height: 30%;
+  border-top: 1px solid #fff;
+  display: flex;
+  flex-direction: row;
+}
+
+.AssaultCube-Cheat-Button {
+  color: #fff;
+  text-align: center;
+  width: 20%;
+  height: 60%;
+  margin: 2.5% 2%;
+  background-color: #1a1a1a;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.AssaultCube-Data-Container {
+  width: 100%;
+  height: 70%;
+  border-top: 1px solid #fff;
+  display: flex;
+  flex-direction: row;
+}

@@ -6,6 +6,7 @@
   height: 100%;
   overflow: hidden;
   background-color: var(--background-color);
+  box-shadow: 0px 5px 15px #fff;
 }
 
 .AndroidButton-Div {
