@@ -1,9 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import * as Globals from "./../../../../globals";
 
 const SvgHomeButton = ({ fillColor, strokeColor }) => {
   const handleClick = () => {
     console.log("Button clicked!");
+    console.log(Globals.getSettings());
   };
 
   return (
