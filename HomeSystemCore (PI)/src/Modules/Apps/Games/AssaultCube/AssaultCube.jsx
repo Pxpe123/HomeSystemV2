@@ -1,6 +1,8 @@
 import React from "react";
 import "./AssaultCube.css";
 
+import HomeButton from "../Module/HomeButton/HomeBtn";
+
 const AssaultCube = () => {
   function sendDataToPC(data) {
     fetch("http://localhost:30151/Logging", {
@@ -73,9 +75,7 @@ const AssaultCube = () => {
 
   return (
     <div className="AssaultCube-Container">
-      <div className="AssaultCube-Data-Container">
-        <div></div>
-      </div>
+      <div className="AssaultCube-Data-Container"></div>
       <div className="AssaultCube-Cheat-Container">
         <div className="AssaultCube-Cheat-Button" onClick={ToggleGodMode}>
           GodMode

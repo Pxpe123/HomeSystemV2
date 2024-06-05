@@ -15,7 +15,7 @@ const TimeLayout = () => {
 
   return (
     <div className="Time-Container">
-      <div className="Time-Date">{currentTime.format("ddd (MM/DD)")}</div>
+      <div className="Time-Date">{currentTime.format("ddd (DD/MM)")}</div>
       <div className="Time-Time">{currentTime.format("hh:mm A")}</div>
     </div>
   );
