@@ -63,3 +63,7 @@ D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\runtimes\b
 D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\appsettings.json
 D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
 D:\Develope\HomeSystemV2\PCManager\PCManager\obj\Debug\net8.0-windows\PCManager.sourcelink.json
+D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\CommunityToolkit.Mvvm.dll
+D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\F1Sharp.dll
+D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\F1-Series.dll
+D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\F1-Series.pdb

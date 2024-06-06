@@ -8,7 +8,7 @@ public static class Pointers
     
     public static readonly int healthOffset = 0xEC;
     
-    public static readonly int armourOffset = 0x12;
+    public static readonly int armourOffset = 0xF0;
 
     public static readonly int pistolMagAmmoOffset = 0x12C;
     public static readonly int pistolResAmmoOffset = 0x108;

@@ -34,20 +34,117 @@
 }
 
 .AssaultCube-Cheat-Button {
+  display: flex;
+  flex-direction: column;
   color: #fff;
   text-align: center;
   width: 20%;
   height: 60%;
   margin: 2.5% 2%;
   background-color: #1a1a1a;
-  border: 2px solid #fff;
+  border: 2px solid;
   border-radius: 15px;
   cursor: pointer;
 }
 
 .AssaultCube-Data-Container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically center items */
+  width: 100%;
+  height: 70%;
+}
+
+.AssaultCube-Data-Section-1,
+.AssaultCube-Data-Section-2,
+.AssaultCube-Data-Section-3 {
+  position: relative;
+}
+
+.AssaultCube-Data-Section-1 {
+  width: 25%;
+  aspect-ratio: 1/1;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin-left: 5%;
+}
+
+.AssaultCube-Data-Section-2 {
+  width: 25%;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  margin-left: -5%;
+}
+
+.AssaultCube-Data-Section-3 {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 77%;
+  margin-right: 2%;
+  margin-left: -5%;
+}
+
+.AssaultCube-Right-Items {
+  width: 90%;
+  height: 30%;
+  margin-left: 5%;
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+  border: 2px solid #fff;
+  border-radius: 15px;
+}
+
+.Cheat-Button-Top {
+  align-content: center;
+  width: 100%;
+  height: 30%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.Cheat-Button-Top2 {
+  align-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.Cheat-Button-Bottom {
   width: 100%;
   height: 70%;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.Cheat-Led {
+  width: 20px; /* Adjust size as needed */
+  height: 20px; /* Adjust size as needed */
+  border-radius: 50%;
+  background-color: transparent;
+  box-shadow: 0 0 10px 5px red; /* Initial shadow */
+}
+
+.Led-Border-Off {
+  border-color: red;
+  box-shadow: 0 0 20px 3px red;
+}
+
+.Led-Border-On {
+  border-color: green;
+  box-shadow: 0 0 20px 3px green;
+}
+
+.Led-Off {
+  background-color: red;
+  box-shadow: 0 0 20px 10px red;
+}
+
+.Led-On {
+  background-color: green;
+  box-shadow: 0 0 20px 10px green;
 }

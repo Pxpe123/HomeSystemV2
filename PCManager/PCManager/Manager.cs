@@ -3,9 +3,12 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using AssaultCubeExternal;
+using F1_Series;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace PCManager
 {
@@ -13,6 +16,7 @@ namespace PCManager
     {
         private IHost _restApiHost;
         private readonly AssaultCubeMain _assaultCubeExternal = new AssaultCubeMain();
+        private readonly F1SeriesMain _f1Series = new F1SeriesMain();
 
         public async Task Init(string[] args)
         {
@@ -54,6 +58,7 @@ namespace PCManager
                 var processes = Process.GetProcesses();
                 var acClient = processes.FirstOrDefault(p => p.ProcessName.Equals("ac_client", StringComparison.OrdinalIgnoreCase));
                 var derailValley = processes.FirstOrDefault(p => p.ProcessName.Equals("DerailValley", StringComparison.OrdinalIgnoreCase));
+                var F1Game = processes.FirstOrDefault(p => p.ProcessName.Equals("F1_24", StringComparison.OrdinalIgnoreCase));
                 var gta5 = processes.FirstOrDefault(p => p.ProcessName.Equals("gta5", StringComparison.OrdinalIgnoreCase));
 
                 if (acClient != null && !Vars.assaultCubeInjected)
@@ -82,10 +87,39 @@ namespace PCManager
                     Console.WriteLine("GameClosed");
                 }
                 
+                if (F1Game != null && !Vars.f1SeriesInjected)
+                {
+                    Vars.f1SeriesInjected = true;
+                    _f1Series.StartUp();
+                    Console.WriteLine("F1 Series is running");
+                }
+                
+                if (F1Game == null && Vars.f1SeriesInjected)
+                {
+                    Vars.f1SeriesInjected = false;
+                    Console.WriteLine("GameClosed");
+                    _f1Series.ShutDown();
+                }
+                
                 if (gta5 != null)
                 {
                     Console.WriteLine("gta5 is running");
                 }
+                
+                if (_f1Series != null && _f1Series.gameData != null)
+                {
+                    
+                    var carTelemetryData = _f1Series.gameData["CarTelemetryData"];
+                    if (carTelemetryData != null)
+                    {
+
+                        // Save carTelemetryData to a JSON file
+                        string jsonFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "telem.json");
+                        File.WriteAllText(jsonFilePath, _f1Series.gameData.ToString());
+                    }
+
+                }
+                
                 await Task.Delay(3000);
             }
         }

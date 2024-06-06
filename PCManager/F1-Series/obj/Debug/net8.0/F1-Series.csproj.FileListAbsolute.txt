@@ -1,0 +1,13 @@
+D:\Develope\HomeSystemV2\PCManager\F1-Series\bin\Debug\net8.0\F1-Series.deps.json
+D:\Develope\HomeSystemV2\PCManager\F1-Series\bin\Debug\net8.0\F1-Series.dll
+D:\Develope\HomeSystemV2\PCManager\F1-Series\bin\Debug\net8.0\F1-Series.pdb
+D:\Develope\HomeSystemV2\PCManager\F1-Series\obj\Debug\net8.0\F1-Series.csproj.AssemblyReference.cache
+D:\Develope\HomeSystemV2\PCManager\F1-Series\obj\Debug\net8.0\F1-Series.GeneratedMSBuildEditorConfig.editorconfig
+D:\Develope\HomeSystemV2\PCManager\F1-Series\obj\Debug\net8.0\F1-Series.AssemblyInfoInputs.cache
+D:\Develope\HomeSystemV2\PCManager\F1-Series\obj\Debug\net8.0\F1-Series.AssemblyInfo.cs
+D:\Develope\HomeSystemV2\PCManager\F1-Series\obj\Debug\net8.0\F1-Series.csproj.CoreCompileInputs.cache
+D:\Develope\HomeSystemV2\PCManager\F1-Series\obj\Debug\net8.0\F1-Series.sourcelink.json
+D:\Develope\HomeSystemV2\PCManager\F1-Series\obj\Debug\net8.0\F1-Series.dll
+D:\Develope\HomeSystemV2\PCManager\F1-Series\obj\Debug\net8.0\refint\F1-Series.dll
+D:\Develope\HomeSystemV2\PCManager\F1-Series\obj\Debug\net8.0\F1-Series.pdb
+D:\Develope\HomeSystemV2\PCManager\F1-Series\obj\Debug\net8.0\ref\F1-Series.dll

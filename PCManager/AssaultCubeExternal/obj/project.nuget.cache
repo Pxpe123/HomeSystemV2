@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "f9cKUxr7U7ryy9cZ1GVA3h5CBFLVgzJSRIqnmSET1Twpt68RjHtJ21r4Ok4gffjOs+aQ+P00Sz6gRjoBz2qepg==",
+  "dgSpecHash": "OeEWz+4YoNGgexT2+NBVsNgdSWaxRYkqH8g72JswuxNSqrP+Sp7iI3Ni43uKZ3AUpUyOBZIKqgQ9J9/XN89qTw==",
   "success": true,
   "projectFilePath": "D:\\Develope\\HomeSystemV2\\PCManager\\AssaultCubeExternal\\AssaultCubeExternal.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\billy\\.nuget\\packages\\microsoft.extensions.options\\2.2.0\\microsoft.extensions.options.2.2.0.nupkg.sha512",
     "C:\\Users\\billy\\.nuget\\packages\\microsoft.extensions.primitives\\2.2.0\\microsoft.extensions.primitives.2.2.0.nupkg.sha512",
     "C:\\Users\\billy\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
+    "C:\\Users\\billy\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\billy\\.nuget\\packages\\swed64\\1.0.5\\swed64.1.0.5.nupkg.sha512",
     "C:\\Users\\billy\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\billy\\.nuget\\packages\\system.componentmodel.annotations\\4.5.0\\system.componentmodel.annotations.4.5.0.nupkg.sha512",

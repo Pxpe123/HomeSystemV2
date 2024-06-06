@@ -44,7 +44,12 @@ const DerailValley = () => {
 
   return (
     <div className="DerailValley-Main">
-      <div className="DerailValley-Top"></div>
+      <div className="DerailValley-Top">
+        <div>
+          <iframe></iframe>
+        </div>
+        <div></div>
+      </div>
       <div className="DerailValley-Bottom">
         {trainData &&
           Object.keys(trainData).map((trainId) => (

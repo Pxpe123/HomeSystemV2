@@ -15,7 +15,7 @@ namespace AssaultCubeExternal
         {
             swed32 = new Swed("ac_client");
             moduleBase = swed32.GetModuleBase("ac_client.exe");
-            PlayerFunctions = new PlayerFunctions(swed32, moduleBase);
+            PlayerFunctions = new PlayerFunctions(swed32, moduleBase, Vars);
             
             isRunning = true;
             

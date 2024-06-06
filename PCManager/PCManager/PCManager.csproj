@@ -35,4 +35,8 @@
       <PackageReference Include="swed32" Version="1.1.0" />
       <PackageReference Include="swed64" Version="1.0.5" />
     </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\F1-Series\F1-Series.csproj" />
+    </ItemGroup>
 </Project>
