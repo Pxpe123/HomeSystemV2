@@ -14,6 +14,7 @@
           "Microsoft.Extensions.Hosting": "9.0.0-preview.4.24266.19",
           "Microsoft.Extensions.Logging": "9.0.0-preview.4.24266.19",
           "Newtonsoft.Json": "13.0.3",
+          "PCInfo": "1.0.0",
           "swed32": "1.1.0",
           "swed64": "1.0.5",
           "AssaultCubeExternal": "1.0.0.0"
@@ -509,6 +510,26 @@
         }
       },
       "System.Buffers/4.5.0": {},
+      "System.CodeDom/9.0.0-preview.4.24266.19": {
+        "runtime": {
+          "lib/net8.0/System.CodeDom.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.26619"
+          }
+        }
+      },
+      "System.Configuration.ConfigurationManager/9.0.0-preview.4.24266.19": {
+        "dependencies": {
+          "System.Diagnostics.EventLog": "9.0.0-preview.4.24266.19",
+          "System.Security.Cryptography.ProtectedData": "9.0.0-preview.4.24266.19"
+        },
+        "runtime": {
+          "lib/net8.0/System.Configuration.ConfigurationManager.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.26619"
+          }
+        }
+      },
       "System.Diagnostics.DiagnosticSource/9.0.0-preview.4.24266.19": {
         "runtime": {
           "lib/net8.0/System.Diagnostics.DiagnosticSource.dll": {
@@ -539,7 +560,53 @@
           }
         }
       },
+      "System.Diagnostics.PerformanceCounter/9.0.0-preview.4.24266.19": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "9.0.0-preview.4.24266.19"
+        },
+        "runtime": {
+          "lib/net8.0/System.Diagnostics.PerformanceCounter.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.26619"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/System.Diagnostics.PerformanceCounter.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.26619"
+          }
+        }
+      },
+      "System.Management/9.0.0-preview.4.24266.19": {
+        "dependencies": {
+          "System.CodeDom": "9.0.0-preview.4.24266.19"
+        },
+        "runtime": {
+          "lib/net8.0/System.Management.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.26619"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/System.Management.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.26619"
+          }
+        }
+      },
       "System.Reflection.Metadata/1.6.0": {},
+      "System.Security.Cryptography.ProtectedData/9.0.0-preview.4.24266.19": {
+        "runtime": {
+          "lib/net8.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.24.26619"
+          }
+        }
+      },
       "System.Text.Encodings.Web/9.0.0-preview.4.24266.19": {
         "runtime": {
           "lib/net8.0/System.Text.Encodings.Web.dll": {
@@ -574,6 +641,16 @@
         },
         "runtime": {
           "F1-Series.dll": {}
+        }
+      },
+      "PCInfo/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.3",
+          "System.Diagnostics.PerformanceCounter": "9.0.0-preview.4.24266.19",
+          "System.Management": "9.0.0-preview.4.24266.19"
+        },
+        "runtime": {
+          "PCInfo.dll": {}
         }
       },
       "AssaultCubeExternal/1.0.0.0": {
@@ -900,6 +977,20 @@
       "path": "system.buffers/4.5.0",
       "hashPath": "system.buffers.4.5.0.nupkg.sha512"
     },
+    "System.CodeDom/9.0.0-preview.4.24266.19": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wFc8nl7XwTpE65l4SqlkQBhVuD8Vok2+TQdT38ijC8KBWAoxplql0rWQvUOWIKY79ZZIxjLexoQom8wPLYCA5w==",
+      "path": "system.codedom/9.0.0-preview.4.24266.19",
+      "hashPath": "system.codedom.9.0.0-preview.4.24266.19.nupkg.sha512"
+    },
+    "System.Configuration.ConfigurationManager/9.0.0-preview.4.24266.19": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GpzG992A/CwJCvtoMsAySDCgcfKnUvX5d/iUn3nPzUOxABdysxfuDMajegc6r1+Z1OzO4tBZJBSRaXyaB5wLFQ==",
+      "path": "system.configuration.configurationmanager/9.0.0-preview.4.24266.19",
+      "hashPath": "system.configuration.configurationmanager.9.0.0-preview.4.24266.19.nupkg.sha512"
+    },
     "System.Diagnostics.DiagnosticSource/9.0.0-preview.4.24266.19": {
       "type": "package",
       "serviceable": true,
@@ -914,12 +1005,33 @@
       "path": "system.diagnostics.eventlog/9.0.0-preview.4.24266.19",
       "hashPath": "system.diagnostics.eventlog.9.0.0-preview.4.24266.19.nupkg.sha512"
     },
+    "System.Diagnostics.PerformanceCounter/9.0.0-preview.4.24266.19": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fYXbSG7QeePjEHcvPo1/jT2II/Pie9Uj+Sld4PEoTnJ3DczL7HQx05Njaa1jVeCpyPGlN8C7QBjRYyBv5DVBBA==",
+      "path": "system.diagnostics.performancecounter/9.0.0-preview.4.24266.19",
+      "hashPath": "system.diagnostics.performancecounter.9.0.0-preview.4.24266.19.nupkg.sha512"
+    },
+    "System.Management/9.0.0-preview.4.24266.19": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Y8vMxo6FK+A7wnCqynlU4CKho9pXzKB8DrYNa2oQRwIM7rFrYEmiwKS0YO7qcmjs2lx8FYxCZ28Kfl7dL4+wOw==",
+      "path": "system.management/9.0.0-preview.4.24266.19",
+      "hashPath": "system.management.9.0.0-preview.4.24266.19.nupkg.sha512"
+    },
     "System.Reflection.Metadata/1.6.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-COC1aiAJjCoA5GBF+QKL2uLqEBew4JsCkQmoHKbN3TlOZKa2fKLz5CpiRQKDz0RsAOEGsVKqOD5bomsXq/4STQ==",
       "path": "system.reflection.metadata/1.6.0",
       "hashPath": "system.reflection.metadata.1.6.0.nupkg.sha512"
+    },
+    "System.Security.Cryptography.ProtectedData/9.0.0-preview.4.24266.19": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-akWD5tzPZzh4dmvVdf4IjttPmMebZ5rT9fd3pVPElgS8+Ymhnc0CZpYTrpNxgneOwNcBBUN0oTkj9LbZ7NuDbA==",
+      "path": "system.security.cryptography.protecteddata/9.0.0-preview.4.24266.19",
+      "hashPath": "system.security.cryptography.protecteddata.9.0.0-preview.4.24266.19.nupkg.sha512"
     },
     "System.Text.Encodings.Web/9.0.0-preview.4.24266.19": {
       "type": "package",
@@ -936,6 +1048,11 @@
       "hashPath": "system.text.json.9.0.0-preview.4.24266.19.nupkg.sha512"
     },
     "F1-Series/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PCInfo/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

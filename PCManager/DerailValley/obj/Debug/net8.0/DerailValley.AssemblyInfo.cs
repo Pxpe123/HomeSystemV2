@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DerailValley")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bd96f4a31af90ba12fca2841ea9a6a6325b94873")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bef8b54adcf0b310c2c218fc7d2cf4d64162d9d3")]
 [assembly: System.Reflection.AssemblyProductAttribute("DerailValley")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DerailValley")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

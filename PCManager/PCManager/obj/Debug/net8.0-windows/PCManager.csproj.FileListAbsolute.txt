@@ -67,3 +67,12 @@ D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\CommunityT
 D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\F1Sharp.dll
 D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\F1-Series.dll
 D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\F1-Series.pdb
+D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\System.CodeDom.dll
+D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\System.Management.dll
+D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Management.dll
+D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\PCInfo.dll
+D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\PCInfo.pdb
+D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\System.Configuration.ConfigurationManager.dll
+D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\System.Diagnostics.PerformanceCounter.dll
+D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\System.Security.Cryptography.ProtectedData.dll
+D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.PerformanceCounter.dll

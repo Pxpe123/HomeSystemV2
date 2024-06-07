@@ -1,8 +1,0 @@
-﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CDevelope_005CHomeSystemV2_005CPCManager_005CPCManager_005CGameDLL_005CAssaultCube_005CAssaultCubeExternal_002Edll/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CDevelope_005CHomeSystemV2_005CPCManager_005CPCManager_005CGameDLL_005CGTA_005CWolf_002Edll/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CDevelope_005CHomeSystemV2_005CPCManager_005CPCManager_005CSwed_005Cswed32_002Edll/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CDevelope_005CHomeSystemV2_005CPCManager_005CSwed_005Cswed32_002Edll/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CDevelope_005CHomeSystemV2_005CPCManager_005CSwed_005Cswed64_002Edll/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CDevelope_005CHomeSystemV2_005CPCManager_005CUtils_005Cswed32_002Edll/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/AddReferences/RecentPaths/=D_003A_005CDevelope_005CHomeSystemV2_005CPCManager_005CUtils_005Cswed64_002Edll/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>

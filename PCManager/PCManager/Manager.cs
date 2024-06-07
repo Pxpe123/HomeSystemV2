@@ -10,6 +10,7 @@ using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using System.IO;
 
+
 namespace PCManager
 {
     public class Manager
@@ -17,6 +18,7 @@ namespace PCManager
         private IHost _restApiHost;
         private readonly AssaultCubeMain _assaultCubeExternal = new AssaultCubeMain();
         private readonly F1SeriesMain _f1Series = new F1SeriesMain();
+        private readonly PCInfoMain _pcInfo = new PCInfoMain();
 
         public async Task Init(string[] args)
         {
@@ -61,6 +63,9 @@ namespace PCManager
                 var F1Game = processes.FirstOrDefault(p => p.ProcessName.Equals("F1_24", StringComparison.OrdinalIgnoreCase));
                 var gta5 = processes.FirstOrDefault(p => p.ProcessName.Equals("gta5", StringComparison.OrdinalIgnoreCase));
 
+                Console.WriteLine(_pcInfo.GetPCInfo().ToString());
+                Console.WriteLine("TETE");
+                
                 if (acClient != null && !Vars.assaultCubeInjected)
                 {
                     Vars.assaultCubeInjected = true;

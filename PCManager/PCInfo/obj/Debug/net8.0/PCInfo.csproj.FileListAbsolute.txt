@@ -1,0 +1,13 @@
+D:\Develope\HomeSystemV2\PCManager\PCInfo\obj\Debug\net8.0\PCInfo.csproj.AssemblyReference.cache
+D:\Develope\HomeSystemV2\PCManager\PCInfo\obj\Debug\net8.0\PCInfo.GeneratedMSBuildEditorConfig.editorconfig
+D:\Develope\HomeSystemV2\PCManager\PCInfo\obj\Debug\net8.0\PCInfo.AssemblyInfoInputs.cache
+D:\Develope\HomeSystemV2\PCManager\PCInfo\obj\Debug\net8.0\PCInfo.AssemblyInfo.cs
+D:\Develope\HomeSystemV2\PCManager\PCInfo\obj\Debug\net8.0\PCInfo.csproj.CoreCompileInputs.cache
+D:\Develope\HomeSystemV2\PCManager\PCInfo\obj\Debug\net8.0\PCInfo.sourcelink.json
+D:\Develope\HomeSystemV2\PCManager\PCInfo\bin\Debug\net8.0\PCInfo.deps.json
+D:\Develope\HomeSystemV2\PCManager\PCInfo\bin\Debug\net8.0\PCInfo.dll
+D:\Develope\HomeSystemV2\PCManager\PCInfo\bin\Debug\net8.0\PCInfo.pdb
+D:\Develope\HomeSystemV2\PCManager\PCInfo\obj\Debug\net8.0\PCInfo.dll
+D:\Develope\HomeSystemV2\PCManager\PCInfo\obj\Debug\net8.0\refint\PCInfo.dll
+D:\Develope\HomeSystemV2\PCManager\PCInfo\obj\Debug\net8.0\PCInfo.pdb
+D:\Develope\HomeSystemV2\PCManager\PCInfo\obj\Debug\net8.0\ref\PCInfo.dll
