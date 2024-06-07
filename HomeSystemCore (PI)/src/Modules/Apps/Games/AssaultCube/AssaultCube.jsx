@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./AssaultCube.css";
 import HomeButton from "../Module/HomeButton/HomeBtn";
 
-import "./../../../../globals" as *
+import * as Globals from "./../../../../globals";
 
 const AssaultCube = () => {
   const [gameData, setGameData] = useState({
@@ -10,18 +10,18 @@ const AssaultCube = () => {
       RifleMagAmmo: 0,
       RifleResAmmo: 0,
       PistolMagAmmo: 0,
-      PistolResAmmo: 0
+      PistolResAmmo: 0,
     },
     PlayerData: {
       Health: 0,
       Armour: 0,
-      Grenades: 0
+      Grenades: 0,
     },
     CheatData: {
       isGodMode: false,
       isInfAmmo: false,
-      isNoRecoil: false
-    }
+      isNoRecoil: false,
+    },
   });
 
   const sendDataToPC = async (data) => {
@@ -56,23 +56,25 @@ const AssaultCube = () => {
     const data = {
       Type: "Game",
       Game: "AssaultCube",
-      Value: "GodMode"
+      Value: "GodMode",
     };
 
     setGameData((prevState) => ({
       ...prevState,
-      CheatData: { ...prevState.CheatData, isGodMode: !prevState.CheatData.isGodMode }
+      CheatData: {
+        ...prevState.CheatData,
+        isGodMode: !prevState.CheatData.isGodMode,
+      },
     }));
 
     await sendDataToPC(data);
   };
 
-
   const ReplenishHealth = async () => {
     const data = {
       Type: "Game",
       Game: "AssaultCube",
-      Value: "RefillHealth"
+      Value: "RefillHealth",
     };
     await sendDataToPC(data);
   };
@@ -82,11 +84,14 @@ const AssaultCube = () => {
     const data = {
       Type: "Game",
       Game: "AssaultCube",
-      Value: "InfAmmo"
+      Value: "InfAmmo",
     };
     setGameData((prevState) => ({
       ...prevState,
-      CheatData: { ...prevState.CheatData, isInfAmmo: !prevState.CheatData.isInfAmmo }
+      CheatData: {
+        ...prevState.CheatData,
+        isInfAmmo: !prevState.CheatData.isInfAmmo,
+      },
     }));
 
     await sendDataToPC(data);
@@ -96,7 +101,7 @@ const AssaultCube = () => {
     const data = {
       Type: "Game",
       Game: "AssaultCube",
-      Value: "RefillAmmo"
+      Value: "RefillAmmo",
     };
     await sendDataToPC(data);
   };
@@ -106,11 +111,14 @@ const AssaultCube = () => {
     const data = {
       Type: "Game",
       Game: "AssaultCube",
-      Value: "NoRecoil"
+      Value: "NoRecoil",
     };
     setGameData((prevState) => ({
       ...prevState,
-      CheatData: { ...prevState.CheatData, isNoRecoil: !prevState.CheatData.isNoRecoil }
+      CheatData: {
+        ...prevState.CheatData,
+        isNoRecoil: !prevState.CheatData.isNoRecoil,
+      },
     }));
 
     await sendDataToPC(data);
@@ -138,7 +146,7 @@ const AssaultCube = () => {
     const data = {
       Type: "Game",
       Game: "AssaultCube",
-      Value: "GetPlayerData"
+      Value: "GetPlayerData",
     };
     const response = await sendDataToPC(data);
     if (response) {
@@ -148,64 +156,70 @@ const AssaultCube = () => {
   };
 
   return (
-      <div className="AssaultCube-Container">
-        <div className="AssaultCube-Data-Container">
-          <div className={"AssaultCube-Data-Section-1"}></div>
-          <div className={"AssaultCube-Data-Section-2"}></div>
-          <div className={"AssaultCube-Data-Section-3"}>
-            <div className={"AssaultCube-Right-Items"}>
-              Assault Rifle
-            </div>
-            <div className={"AssaultCube-Right-Items"}>
-              Pistol
-            </div>
-            <div className={"AssaultCube-Right-Items"}>
-              Grenades
-            </div>
+    <div className="AssaultCube-Container">
+      <div className="AssaultCube-Data-Container">
+        <div className={"AssaultCube-Data-Section-1"}></div>
+        <div className={"AssaultCube-Data-Section-2"}></div>
+        <div className={"AssaultCube-Data-Section-3"}>
+          <div className={"AssaultCube-Right-Items"}>Assault Rifle</div>
+          <div className={"AssaultCube-Right-Items"}>Pistol</div>
+          <div className={"AssaultCube-Right-Items"}>Grenades</div>
+        </div>
+      </div>
+      <div className="AssaultCube-Cheat-Container">
+        <div
+          className={`AssaultCube-Cheat-Button ${
+            gameData.CheatData.isGodMode ? "Led-Border-On" : "Led-Border-Off"
+          }`}
+          onClick={ToggleGodMode}
+        >
+          <div className="Cheat-Button-Top">God Mode</div>
+          <div className="Cheat-Button-Bottom">
+            <div
+              className={`Cheat-Led ${
+                gameData.CheatData.isGodMode ? "Led-On" : "Led-Off"
+              }`}
+            ></div>
           </div>
         </div>
-        <div className="AssaultCube-Cheat-Container">
-          <div
-              className={`AssaultCube-Cheat-Button ${
-                  gameData.CheatData.isGodMode ? "Led-Border-On" : "Led-Border-Off"
+        <div className="AssaultCube-Cheat-Button" onClick={ReplenishHealth}>
+          <div className="Cheat-Button-Top2">Refill Health</div>
+        </div>
+        <div
+          className={`AssaultCube-Cheat-Button ${
+            gameData.CheatData.isInfAmmo ? "Led-Border-On" : "Led-Border-Off"
+          }`}
+          onClick={ToggleInfAmmo}
+        >
+          <div className="Cheat-Button-Top">Infinite Ammo</div>
+          <div className="Cheat-Button-Bottom">
+            <div
+              className={`Cheat-Led ${
+                gameData.CheatData.isInfAmmo ? "Led-On" : "Led-Off"
               }`}
-              onClick={ToggleGodMode}
-          >
-            <div className="Cheat-Button-Top">God Mode</div>
-            <div className="Cheat-Button-Bottom">
-              <div className={`Cheat-Led ${gameData.CheatData.isGodMode ? "Led-On" : "Led-Off"}`}></div>
-            </div>
+            ></div>
           </div>
-          <div className="AssaultCube-Cheat-Button" onClick={ReplenishHealth}>
-            <div className="Cheat-Button-Top2">Refill Health</div>
-          </div>
-          <div
-              className={`AssaultCube-Cheat-Button ${
-                  gameData.CheatData.isInfAmmo ? "Led-Border-On" : "Led-Border-Off"
+        </div>
+        <div className="AssaultCube-Cheat-Button" onClick={RefillAmmo}>
+          <div className="Cheat-Button-Top2">Refill Ammo</div>
+        </div>
+        <div
+          className={`AssaultCube-Cheat-Button ${
+            gameData.CheatData.isNoRecoil ? "Led-Border-On" : "Led-Border-Off"
+          }`}
+          onClick={NoRecoil}
+        >
+          <div className="Cheat-Button-Top">No Recoil</div>
+          <div className="Cheat-Button-Bottom">
+            <div
+              className={`Cheat-Led ${
+                gameData.CheatData.isNoRecoil ? "Led-On" : "Led-Off"
               }`}
-              onClick={ToggleInfAmmo}
-          >
-            <div className="Cheat-Button-Top">Infinite Ammo</div>
-            <div className="Cheat-Button-Bottom">
-              <div className={`Cheat-Led ${gameData.CheatData.isInfAmmo ? "Led-On" : "Led-Off"}`}></div>
-            </div>
-          </div>
-          <div className="AssaultCube-Cheat-Button" onClick={RefillAmmo}>
-            <div className="Cheat-Button-Top2">Refill Ammo</div>
-          </div>
-          <div
-              className={`AssaultCube-Cheat-Button ${
-                  gameData.CheatData.isNoRecoil ? "Led-Border-On" : "Led-Border-Off"
-              }`}
-              onClick={NoRecoil}
-          >
-            <div className="Cheat-Button-Top">No Recoil</div>
-            <div className="Cheat-Button-Bottom">
-              <div className={`Cheat-Led ${gameData.CheatData.isNoRecoil ? "Led-On" : "Led-Off"}`}></div>
-            </div>
+            ></div>
           </div>
         </div>
       </div>
+    </div>
   );
 };
 

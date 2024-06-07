@@ -21,7 +21,7 @@ const apps = [
   },
   {
     appName: "Test App 3",
-    givenPath: "/test3",
+    givenPath: "/Youtube",
     src: "https://img.icons8.com/ios-filled/100/power-off-button.png",
     isFunctional: false,
   },
