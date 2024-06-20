@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "x-frame-options": "^1.0.0"
+  }
+}

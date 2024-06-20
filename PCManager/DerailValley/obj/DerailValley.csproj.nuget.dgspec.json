@@ -57,6 +57,10 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
             "swed64": {
               "target": "Package",
               "version": "[1.0.5, )"

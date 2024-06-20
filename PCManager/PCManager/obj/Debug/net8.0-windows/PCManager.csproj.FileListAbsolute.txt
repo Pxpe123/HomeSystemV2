@@ -76,3 +76,14 @@ D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\System.Con
 D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\System.Diagnostics.PerformanceCounter.dll
 D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\System.Security.Cryptography.ProtectedData.dll
 D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.PerformanceCounter.dll
+D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\DerailValley.dll
+D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\DerailValley.pdb
+D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\NAudio.dll
+D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\NAudio.Asio.dll
+D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\NAudio.Core.dll
+D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\NAudio.Midi.dll
+D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\NAudio.Wasapi.dll
+D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\NAudio.WinForms.dll
+D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\NAudio.WinMM.dll
+D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\AudioManager-SteelSeries.dll
+D:\Develope\HomeSystemV2\PCManager\PCManager\bin\Debug\net8.0-windows\AudioManager-SteelSeries.pdb

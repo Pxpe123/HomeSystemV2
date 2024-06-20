@@ -1,0 +1,69 @@
+.notification-Container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.notification-Main {
+  background-color: var(--background-color);
+  width: 25%;
+  height: 15%;
+  z-index: 999;
+  border-radius: 10px;
+  border: 2px solid var(--accent-color-opacity);
+}
+
+.Notify-TopLeft {
+  position: absolute;
+  top: 3.5%;
+  left: 1%;
+}
+
+.Notify-TopRight {
+  position: absolute;
+  top: 3.5%;
+  right: 1%;
+}
+
+.Notify-CenterTop {
+  position: absolute;
+  top: 3.5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.Notify-CenterBottom {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.Notify-CenterLeft {
+  position: absolute;
+  top: var(50% - 12.5%);
+  left: 1%;
+  transform: translateY(-50%);
+}
+
+.Notify-CenterRight {
+  position: absolute;
+  top: var(50% - 12.5%);
+  right: 1%;
+  transform: translateY(-50%);
+}
+
+.Notify-BottomLeft {
+  position: absolute;
+  bottom: 20%;
+  left: 1%;
+}
+
+.Notify-BottomRight {
+  position: absolute;
+  bottom: 20%;
+  right: 1%;
+}

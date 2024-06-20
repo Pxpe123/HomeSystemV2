@@ -1,0 +1,78 @@
+/* WOL.css */
+
+.WOL-Container {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-image: url("./../../../resource/Home/background.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.WOL-Button {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.Cheat-Led {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.Led-Border-Off {
+  border: 5px solid red;
+  box-shadow: 0 0 10px 5px red;
+}
+
+.Led-On {
+  background-color: green;
+}
+
+.Led-Border-On {
+  border: 5px solid green;
+  box-shadow: 0 0 10px 5px green;
+}
+
+.Led-Off {
+  background-color: red;
+}
+
+/* Animation */
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.Cheat-Led.Led-Border-On::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: green;
+  animation: blink 1s infinite;
+}
+
+.fill {
+  width: 100%;
+  height: 100%;
+}

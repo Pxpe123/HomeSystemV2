@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "eRhGUIVBoz/PdLca9g57dnr6uNnR8jp+ncbUaqBzvclXbxSzLZSmxrShtqFLAbu6ATX112fQ9jpdDl4a7DexdQ==",
+  "dgSpecHash": "wGAGfk5C6wbo9JIhHKG/X73r19BsFsi9ZA1vSyWOloKrgrPaNuW7lfXuMdZQLTcRmwCa4prF9earAFr2eyc1bQ==",
   "success": true,
   "projectFilePath": "D:\\Develope\\HomeSystemV2\\PCManager\\DerailValley\\DerailValley.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\billy\\.nuget\\packages\\microsoft.extensions.options\\2.2.0\\microsoft.extensions.options.2.2.0.nupkg.sha512",
     "C:\\Users\\billy\\.nuget\\packages\\microsoft.extensions.primitives\\2.2.0\\microsoft.extensions.primitives.2.2.0.nupkg.sha512",
     "C:\\Users\\billy\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
+    "C:\\Users\\billy\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\billy\\.nuget\\packages\\swed64\\1.0.5\\swed64.1.0.5.nupkg.sha512",
     "C:\\Users\\billy\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\billy\\.nuget\\packages\\system.componentmodel.annotations\\4.5.0\\system.componentmodel.annotations.4.5.0.nupkg.sha512",

@@ -1,0 +1,13 @@
+D:\Develope\HomeSystemV2\PCManager\AudioManager-SteelSeries\bin\Debug\net8.0\AudioManager-SteelSeries.deps.json
+D:\Develope\HomeSystemV2\PCManager\AudioManager-SteelSeries\bin\Debug\net8.0\AudioManager-SteelSeries.dll
+D:\Develope\HomeSystemV2\PCManager\AudioManager-SteelSeries\bin\Debug\net8.0\AudioManager-SteelSeries.pdb
+D:\Develope\HomeSystemV2\PCManager\AudioManager-SteelSeries\obj\Debug\net8.0\AudioManager-SteelSeries.csproj.AssemblyReference.cache
+D:\Develope\HomeSystemV2\PCManager\AudioManager-SteelSeries\obj\Debug\net8.0\AudioManager-SteelSeries.GeneratedMSBuildEditorConfig.editorconfig
+D:\Develope\HomeSystemV2\PCManager\AudioManager-SteelSeries\obj\Debug\net8.0\AudioManager-SteelSeries.AssemblyInfoInputs.cache
+D:\Develope\HomeSystemV2\PCManager\AudioManager-SteelSeries\obj\Debug\net8.0\AudioManager-SteelSeries.AssemblyInfo.cs
+D:\Develope\HomeSystemV2\PCManager\AudioManager-SteelSeries\obj\Debug\net8.0\AudioManager-SteelSeries.csproj.CoreCompileInputs.cache
+D:\Develope\HomeSystemV2\PCManager\AudioManager-SteelSeries\obj\Debug\net8.0\AudioManager-SteelSeries.sourcelink.json
+D:\Develope\HomeSystemV2\PCManager\AudioManager-SteelSeries\obj\Debug\net8.0\AudioManager-SteelSeries.dll
+D:\Develope\HomeSystemV2\PCManager\AudioManager-SteelSeries\obj\Debug\net8.0\refint\AudioManager-SteelSeries.dll
+D:\Develope\HomeSystemV2\PCManager\AudioManager-SteelSeries\obj\Debug\net8.0\AudioManager-SteelSeries.pdb
+D:\Develope\HomeSystemV2\PCManager\AudioManager-SteelSeries\obj\Debug\net8.0\ref\AudioManager-SteelSeries.dll

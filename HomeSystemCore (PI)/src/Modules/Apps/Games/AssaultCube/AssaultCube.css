@@ -112,7 +112,6 @@
   font-weight: bold;
 }
 
-
 .Cheat-Button-Bottom {
   width: 100%;
   height: 70%;
@@ -134,6 +133,11 @@
   box-shadow: 0 0 20px 3px red;
 }
 
+.Led-On {
+  background-color: green;
+  box-shadow: 0 0 20px 10px green;
+}
+
 .Led-Border-On {
   border-color: green;
   box-shadow: 0 0 20px 3px green;
@@ -142,9 +146,4 @@
 .Led-Off {
   background-color: red;
   box-shadow: 0 0 20px 10px red;
-}
-
-.Led-On {
-  background-color: green;
-  box-shadow: 0 0 20px 10px green;
 }

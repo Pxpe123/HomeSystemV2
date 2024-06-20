@@ -106,7 +106,7 @@
     -->
 
     <Target Name="AfterBuild">
-        <Copy SourceFiles="$(TargetPath)" DestinationFolder="D:\SteamLibrary\steamapps\common\Derail Valley\Mods\ClassLibrary1" />
+        <Copy SourceFiles="$(TargetPath)" DestinationFolder="D:\SteamLibrary\steamapps\common\Derail Valley\Mods\HomeSystemV2" />
     </Target>
 
 </Project>

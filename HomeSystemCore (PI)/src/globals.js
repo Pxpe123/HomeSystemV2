@@ -2,7 +2,12 @@ let globalData = {
   notifications: {},
   prevApp: null,
   currentActivity: null,
-  settings: {},
+  settings: {
+    notifications: {
+      DND: false,
+      NotifyPos: "TopRight",
+    },
+  },
 };
 
 export function getNotifications() {
@@ -11,6 +16,22 @@ export function getNotifications() {
 
 export function setNotifications(notifications) {
   globalData.notifications = notifications;
+}
+
+export function setNotificationsPos(pos) {
+  globalData.notifications.NotifyPos = pos;
+}
+
+export function getNotificationsPos() {
+  return globalData.notifications.NotifyPos;
+}
+
+export function setNotificationsDND(DND) {
+  globalData.notifications.DND = DND;
+}
+
+export function getNotificationsDND() {
+  return globalData.notifications.DND;
 }
 
 export function getPrevApp() {

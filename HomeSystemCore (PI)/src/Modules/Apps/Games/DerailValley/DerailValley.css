@@ -13,18 +13,18 @@
 
 .DerailValley-Bottom {
   border-top: 2px solid rgb(255, 0, 0);
-  width: 100%;
+  width: 98%;
   height: var(30% - 2px);
   display: flex;
   flex-direction: row; /* Ensures items are arranged in a row */
-  overflow-x: auto; /* Adds horizontal scrolling if needed */
   background-color: #e0e0e0; /* Adjust as necessary */
   padding: 10px;
+  overflow-x: scroll;
 }
 
 .train-div {
-  width: 100px; /* Adjust width as necessary */
-  height: 100px; /* Adjust height as necessary */
+  text-wrap: nowrap;
+  padding: 2.7%;
   background-color: white;
   display: flex;
   justify-content: center;

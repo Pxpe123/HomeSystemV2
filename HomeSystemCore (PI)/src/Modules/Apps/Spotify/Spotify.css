@@ -1,0 +1,40 @@
+/* SubApp.css */
+
+.SubApp-Container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.Playlists {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.Playlists ul {
+  list-style: none;
+  padding: 0;
+}
+
+.Playlists li {
+  padding: 5px 0;
+}
+
+.Player {
+  width: 100%;
+  text-align: center;
+}
+
+.Controls {
+  margin: 20px 0;
+}
+
+.VolumeControl {
+  width: 80%;
+  margin: 0 auto;
+}

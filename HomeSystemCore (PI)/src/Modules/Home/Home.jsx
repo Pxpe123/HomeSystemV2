@@ -2,14 +2,15 @@ import React from "react";
 import "./Home.css";
 import AppIcon from "./../Templates/App-Icon/AppIcon";
 import HomeBackground from "../../resource/Home/background.jpg";
-import GamesIcon from "./Icons/Games"; // Import your GamesIcon component
 
+import SteelSeriesIcon from "./Icons/SteelSeries.png";
+import GamesIcon from "./Icons/Games"; // Import your GamesIcon component
 import SpotifyIcon from "./Icons/pngegg.png";
 
 const apps = [
   {
     appName: "Spotify",
-    givenPath: "/test",
+    givenPath: "/Spotify",
     src: SpotifyIcon,
     isFunctional: false,
   },
@@ -20,16 +21,16 @@ const apps = [
     isFunctional: true,
   },
   {
-    appName: "Test App 3",
-    givenPath: "/Youtube",
+    appName: "Wake On Lan",
+    givenPath: "/WOL",
     src: "https://img.icons8.com/ios-filled/100/power-off-button.png",
-    isFunctional: false,
+    isFunctional: true,
   },
   {
-    appName: "Test App 4",
-    givenPath: "/test4",
-    src: "https://img.icons8.com/ios-filled/100/power-off-button.png",
-    isFunctional: false,
+    appName: "Steel Series Sonar",
+    givenPath: "/SteelSeries",
+    src: SteelSeriesIcon,
+    isFunctional: true,
   },
   {
     appName: "Test App 5",

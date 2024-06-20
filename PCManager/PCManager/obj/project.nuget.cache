@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "IiCmiqBpHpKeb0aPpSJAwrzIJvHNDKhOgV6BrKBduh3wsSu1N5Y2GbuphKU3V7eke/0z0mFXmXyYnYgay008aA==",
+  "dgSpecHash": "hZjasum9Fpd2lFH9AqBrLmc5IF3SK7Klb5DXpRqOPRL9BS92lkAuuPbClSqMD+28zMav7t8K7ydyKwrIGnbT5Q==",
   "success": true,
   "projectFilePath": "D:\\Develope\\HomeSystemV2\\PCManager\\PCManager\\PCManager.csproj",
   "expectedPackageFiles": [
@@ -44,6 +44,15 @@
     "C:\\Users\\billy\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\9.0.0-preview.4.24266.19\\microsoft.extensions.options.configurationextensions.9.0.0-preview.4.24266.19.nupkg.sha512",
     "C:\\Users\\billy\\.nuget\\packages\\microsoft.extensions.primitives\\9.0.0-preview.4.24266.19\\microsoft.extensions.primitives.9.0.0-preview.4.24266.19.nupkg.sha512",
     "C:\\Users\\billy\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
+    "C:\\Users\\billy\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\billy\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\billy\\.nuget\\packages\\naudio\\2.2.1\\naudio.2.2.1.nupkg.sha512",
+    "C:\\Users\\billy\\.nuget\\packages\\naudio.asio\\2.2.1\\naudio.asio.2.2.1.nupkg.sha512",
+    "C:\\Users\\billy\\.nuget\\packages\\naudio.core\\2.2.1\\naudio.core.2.2.1.nupkg.sha512",
+    "C:\\Users\\billy\\.nuget\\packages\\naudio.midi\\2.2.1\\naudio.midi.2.2.1.nupkg.sha512",
+    "C:\\Users\\billy\\.nuget\\packages\\naudio.wasapi\\2.2.1\\naudio.wasapi.2.2.1.nupkg.sha512",
+    "C:\\Users\\billy\\.nuget\\packages\\naudio.winforms\\2.2.1\\naudio.winforms.2.2.1.nupkg.sha512",
+    "C:\\Users\\billy\\.nuget\\packages\\naudio.winmm\\2.2.1\\naudio.winmm.2.2.1.nupkg.sha512",
     "C:\\Users\\billy\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\billy\\.nuget\\packages\\swed32\\1.1.0\\swed32.1.1.0.nupkg.sha512",
     "C:\\Users\\billy\\.nuget\\packages\\swed64\\1.0.5\\swed64.1.0.5.nupkg.sha512",
@@ -55,7 +64,9 @@
     "C:\\Users\\billy\\.nuget\\packages\\system.diagnostics.performancecounter\\9.0.0-preview.4.24266.19\\system.diagnostics.performancecounter.9.0.0-preview.4.24266.19.nupkg.sha512",
     "C:\\Users\\billy\\.nuget\\packages\\system.management\\9.0.0-preview.4.24266.19\\system.management.9.0.0-preview.4.24266.19.nupkg.sha512",
     "C:\\Users\\billy\\.nuget\\packages\\system.reflection.metadata\\1.6.0\\system.reflection.metadata.1.6.0.nupkg.sha512",
+    "C:\\Users\\billy\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\billy\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.0-preview.4.24266.19\\system.security.cryptography.protecteddata.9.0.0-preview.4.24266.19.nupkg.sha512",
+    "C:\\Users\\billy\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\billy\\.nuget\\packages\\system.text.encodings.web\\9.0.0-preview.4.24266.19\\system.text.encodings.web.9.0.0-preview.4.24266.19.nupkg.sha512",
     "C:\\Users\\billy\\.nuget\\packages\\system.text.json\\9.0.0-preview.4.24266.19\\system.text.json.9.0.0-preview.4.24266.19.nupkg.sha512"
   ],

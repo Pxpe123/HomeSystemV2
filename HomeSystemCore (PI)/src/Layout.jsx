@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./Layout.css";
 
+import * as Globals from "./globals.js";
+
 import HomeBackground from "./resource/Home/background.jpg";
 
 import "./vars.css";
@@ -16,10 +18,14 @@ import Home from "./Modules/Home/Home";
 
 //Game App
 import GameApp from "./Modules/Apps/Games/Home/Home";
+import WOLApp from "./Modules/Apps/WOL/WOL";
+import SpotifyApp from "./Modules/Apps/Spotify/Spotify";
 
 //Games
 import DerailValley from "./Modules/Apps/Games/DerailValley/DerailValley";
 import AssaultCube from "./Modules/Apps/Games/AssaultCube/AssaultCube";
+import SteelSeries from "./Modules/Apps/SteelSeries/SteelSeries";
+import Notification from "./Modules/Global Components/Notifications/Notification";
 
 //_________________________//
 //
@@ -37,7 +43,6 @@ import AssaultCube from "./Modules/Apps/Games/AssaultCube/AssaultCube";
 //
 //_________________________//
 
-// Fake Component for /test route
 const TestFakeComponent = () => {
   return (
     <div style={{ width: "100%", height: "100%", backgroundColor: "gray" }}>
@@ -56,12 +61,16 @@ const Layout = () => {
   }, []);
   return (
     <div style={{ height: "100vh", width: "100vw" }}>
+      <Notification />
       <div className="App-Holder">
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/test" element={<TestFakeComponent />} />
             <Route path="/Game" element={<GameApp />} />
+            <Route path="/Spotify" element={<SpotifyApp />} />
+            <Route path="/WOL" element={<WOLApp />} />
+            <Route path="/SteelSeries" element={<SteelSeries />} />
             {"----------------------------------------"}
             {"----------------------------------------"}
             {"----------------------------------------"}

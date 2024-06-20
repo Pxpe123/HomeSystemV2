@@ -62,9 +62,6 @@ namespace PCManager
                 var derailValley = processes.FirstOrDefault(p => p.ProcessName.Equals("DerailValley", StringComparison.OrdinalIgnoreCase));
                 var F1Game = processes.FirstOrDefault(p => p.ProcessName.Equals("F1_24", StringComparison.OrdinalIgnoreCase));
                 var gta5 = processes.FirstOrDefault(p => p.ProcessName.Equals("gta5", StringComparison.OrdinalIgnoreCase));
-
-                Console.WriteLine(_pcInfo.GetPCInfo().ToString());
-                Console.WriteLine("TETE");
                 
                 if (acClient != null && !Vars.assaultCubeInjected)
                 {

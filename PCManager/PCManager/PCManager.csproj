@@ -37,6 +37,8 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\AudioManager-SteelSeries\AudioManager-SteelSeries.csproj" />
+      <ProjectReference Include="..\DerailValley\DerailValley.csproj" />
       <ProjectReference Include="..\F1-Series\F1-Series.csproj" />
       <ProjectReference Include="..\PCInfo\PCInfo.csproj" />
     </ItemGroup>

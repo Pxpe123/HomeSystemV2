@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Net;
+using System.Net.WebSockets;
 using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using DV;
+using DV.Booklets;
+using DV.Logic.Job;
+using Newtonsoft.Json.Linq;
 using UnityEngine;
 using UnityModManagerNet;
+using Task = System.Threading.Tasks.Task;
 
 namespace HomeSystemV2
 {
@@ -50,8 +54,6 @@ namespace HomeSystemV2
             cancellationTokenSource = new CancellationTokenSource();
             CancellationToken cancellationToken = cancellationTokenSource.Token;
 
-            // Start the HTTP server to listen on port 30152
-            Task.Run(() => StartRestApiServer(cancellationToken));
 
             while (!cancellationToken.IsCancellationRequested)
             {
@@ -84,106 +86,81 @@ namespace HomeSystemV2
                     // Deserialize JSON to create a deep copy
                     prevTrainData = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, Dictionary<string, object>>>(trainDataJson);
 
-                    // Check if trainData has changed
-                    if (trainDataJson != Newtonsoft.Json.JsonConvert.SerializeObject(prevTrainData))
+                    IsLoco = PlayerManager.Car.IsLoco;
+
+                    if (IsLoco)
                     {
-                        Log($"Train Data: {trainDataJson}");
+                        TrainTemps = PlayerManager.Car.brakeSystem.heatController.temperature;
+                        IndepBrakePos = PlayerManager.Car.brakeSystem.independentBrakePosition;
+                        TrainBrakePos = PlayerManager.Car.brakeSystem.trainBrakePosition;
+                        HandbrakePos = PlayerManager.Car.brakeSystem.handbrakePosition;
                     }
+
+                    TrainSpeed = PlayerManager.Car.GetForwardSpeed().To1Decimal();
+                    AirPressure = PlayerManager.Car.brakeSystem.brakeCylinderPressure.To1Decimal();
+                    IsStationary = PlayerManager.Car.isStationary;
+                    IsDerailed = PlayerManager.Car.derailed;
+                    IsExploded = PlayerManager.Car.isExploded;
+                    IsEligibleForSleep = PlayerManager.Car.isEligibleForSleep;
+
+                    SendDataToWebSocket();
                 }
                 else
                 {
                     LogWarning("PlayerManager.Car is null. Make sure it is properly initialized.");
                 }
-
-                IsLoco = PlayerManager.Car.IsLoco;
-
-                if (IsLoco)
-                {
-                    TrainTemps = PlayerManager.Car.brakeSystem.heatController.temperature;
-                    IndepBrakePos = PlayerManager.Car.brakeSystem.independentBrakePosition;
-                    TrainBrakePos = PlayerManager.Car.brakeSystem.trainBrakePosition;
-                    HandbrakePos = PlayerManager.Car.brakeSystem.handbrakePosition;
-                }
-
-                TrainSpeed = PlayerManager.Car.GetForwardSpeed().To1Decimal();
-                AirPressure = PlayerManager.Car.brakeSystem.brakeCylinderPressure.To1Decimal();
-                IsStationary = PlayerManager.Car.isStationary;
-                IsDerailed = PlayerManager.Car.derailed;
-                IsExploded = PlayerManager.Car.isExploded;
-                IsEligibleForSleep = PlayerManager.Car.isEligibleForSleep;
-
                 await Task.Delay(5000);
             }
         }
 
-        private static void StartRestApiServer(CancellationToken cancellationToken)
+        public static async Task SendDataToWebSocket()
         {
-            Task.Run(() =>
+            try
             {
-                HttpListener listener = new HttpListener();
-                listener.Prefixes.Add("http://*:30152/");
-                listener.Start();
-
-                Log("HTTP Server started on port 30152");
-
-                while (!cancellationToken.IsCancellationRequested)
+                // Locomotive data
+                var locoData = new
                 {
-                    try
-                    {
-                        var context = listener.GetContext();
-                        var response = context.Response;
+                    TrainSpeed,
+                    AirPressure,
+                    IsStationary,
+                    IsDerailed,
+                    IsExploded,
+                    IsEligibleForSleep,
+                    TrainTemps,
+                    IndepBrakePos,
+                    TrainBrakePos,
+                    HandbrakePos,
+                    TrainGUID,
+                    IsLoco
+                };
 
-                        string responseString = RESTGetData();
-                        byte[] buffer = Encoding.UTF8.GetBytes(responseString);
-                        response.ContentLength64 = buffer.Length;
-                        var output = response.OutputStream;
-                        output.Write(buffer, 0, buffer.Length);
-                        output.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        LogError($"Error in HTTP server: {ex.Message}");
-                    }
+                var trainData = prevTrainData;
+
+                JObject jsonDataObject = JObject.FromObject(new
+                {
+                    LocoData = locoData,
+                    TrainData = trainData
+                });
+
+                jsonDataObject.Add("Type", "PutData");
+                jsonDataObject.Add("Game", "DerailValley");
+
+                using (ClientWebSocket webSocket = new ClientWebSocket())
+                {
+                    Uri serverUri = new Uri("ws://localhost:30151");
+                    await webSocket.ConnectAsync(serverUri, default);
+
+                    byte[] bytes = Encoding.UTF8.GetBytes(jsonDataObject.ToString());
+
+                    await webSocket.SendAsync(new ArraySegment<byte>(bytes), WebSocketMessageType.Text, true, default);
                 }
-
-                listener.Stop();
-            });
-        }
-
-        public static string RESTGetData()
-        {
-            // Locomotive data
-            var locoData = new
+            }
+            catch (Exception ex)
             {
-                TrainSpeed,
-                AirPressure,
-                IsStationary,
-                IsDerailed,
-                IsExploded,
-                IsEligibleForSleep,
-                TrainTemps,
-                IndepBrakePos,
-                TrainBrakePos,
-                HandbrakePos,
-                TrainGUID,
-                IsLoco
-            };
-
-            // Train car data
-            var trainData = prevTrainData;
-
-            // Serialize locomotive data to JSON
-            string locoDataJson = Newtonsoft.Json.JsonConvert.SerializeObject(locoData);
-
-            // Serialize train car data to JSON
-            string trainDataJson = Newtonsoft.Json.JsonConvert.SerializeObject(trainData);
-
-            // Combine the JSON strings into a single JSON object
-            string jsonData = $"{{\"LocoData\": {locoDataJson}, \"TrainData\": {trainDataJson}}}";
-
-            return jsonData;
+                // Handle exceptions here
+                LogError($"Error sending data to WebSocket: {ex.Message}");
+            }
         }
-
         private static bool Unload(UnityModManager.ModEntry modEntry)
         {
             cancellationTokenSource?.Cancel();

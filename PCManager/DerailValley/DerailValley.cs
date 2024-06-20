@@ -1,52 +1,30 @@
+using System;
 using System.Threading;
+using Newtonsoft.Json.Linq;
 using Swed64;
 
 namespace DerailValley
 {
-    public partial class DerailValley
+    public class DerailValley
     {
+        public JObject GameData { get; private set; }
 
-        private readonly HttpClient httpClient;
-
-        public DerailValley()
+        public void SetGameData(JToken gameData)
         {
-            httpClient = new HttpClient();
-        }
-
-        public async Task UpdateData()
-        {
-            try
+            // Ensure gameData is of type JObject before casting
+            if (gameData is JObject obj)
             {
-                string url = "http://localhost:30152/";
-                HttpResponseMessage response = await httpClient.GetAsync(url);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    string responseData = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine(responseData);
-                }
-                else
-                {
-                    Console.WriteLine($"Failed to fetch data. Status code: {response.StatusCode}");
-                }
+                GameData = obj;
             }
-            catch (Exception ex)
+            else
             {
-                Console.WriteLine($"An error occurred: {ex.Message}");
+                Console.WriteLine("Received game data is not of type JObject.");
             }
         }
-        
-        private bool isRunning;
-        
-        
-        public void Start()
+
+        public JObject GetGameData()
         {
-        }
-    
-        
-        public void End()
-        {
-            isRunning = false;
+            return GameData;
         }
     }
 }
