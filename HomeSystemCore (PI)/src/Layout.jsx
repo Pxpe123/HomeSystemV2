@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./Layout.css";
 
@@ -14,17 +15,10 @@ import Footer from "./Modules/Footer/Footer";
 //Home
 import Home from "./Modules/Home/Home";
 
-//Misc Apps
-
-//Game App
-import GameApp from "./Modules/Apps/Games/Home/Home";
 import WOLApp from "./Modules/Apps/WOL/WOL";
 import SpotifyApp from "./Modules/Apps/Spotify/Spotify";
+import SteelSeries from "./Modules/Apps/SteelSeries/SteelSeries.jsx";
 
-//Games
-import DerailValley from "./Modules/Apps/Games/DerailValley/DerailValley";
-import AssaultCube from "./Modules/Apps/Games/AssaultCube/AssaultCube";
-import SteelSeries from "./Modules/Apps/SteelSeries/SteelSeries";
 import Notification from "./Modules/Global Components/Notifications/Notification";
 
 //_________________________//
@@ -61,13 +55,11 @@ const Layout = () => {
   }, []);
   return (
     <div style={{ height: "100vh", width: "100vw" }}>
-      <Notification />
       <div className="App-Holder">
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/test" element={<TestFakeComponent />} />
-            <Route path="/Game" element={<GameApp />} />
             <Route path="/Spotify" element={<SpotifyApp />} />
             <Route path="/WOL" element={<WOLApp />} />
             <Route path="/SteelSeries" element={<SteelSeries />} />
@@ -81,8 +73,6 @@ const Layout = () => {
             {"----------------------------------------"}
             {"----------------------------------------"}
             {"--------------Game Section--------------"}
-            <Route path="/Game/AssaultCube" element={<AssaultCube />} />
-            <Route path="/Game/DerailValley" element={<DerailValley />} />
           </Routes>
         </Router>
       </div>

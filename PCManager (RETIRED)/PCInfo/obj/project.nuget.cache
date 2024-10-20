@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "a2PgSuIl4LK/nsEs+UHiyKBVPGOnRdJMyu2ddkPUN9KvdGncXC5iwasPWd87jRT9iC7bqoT2gbF+jTh8i3IUDA==",
+  "success": true,
+  "projectFilePath": "D:\\Develope\\HomeSystemV2\\PCManager (RETIRED)\\PCInfo\\PCInfo.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\billy\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\billy\\.nuget\\packages\\system.codedom\\9.0.0-preview.4.24266.19\\system.codedom.9.0.0-preview.4.24266.19.nupkg.sha512",
+    "C:\\Users\\billy\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.0-preview.4.24266.19\\system.configuration.configurationmanager.9.0.0-preview.4.24266.19.nupkg.sha512",
+    "C:\\Users\\billy\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.0-preview.4.24266.19\\system.diagnostics.eventlog.9.0.0-preview.4.24266.19.nupkg.sha512",
+    "C:\\Users\\billy\\.nuget\\packages\\system.diagnostics.performancecounter\\9.0.0-preview.4.24266.19\\system.diagnostics.performancecounter.9.0.0-preview.4.24266.19.nupkg.sha512",
+    "C:\\Users\\billy\\.nuget\\packages\\system.management\\9.0.0-preview.4.24266.19\\system.management.9.0.0-preview.4.24266.19.nupkg.sha512",
+    "C:\\Users\\billy\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.0-preview.4.24266.19\\system.security.cryptography.protecteddata.9.0.0-preview.4.24266.19.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,7 +1,7 @@
 const { app, BrowserWindow } = require("electron");
 const path = require("path");
 
-let DevMode = true;
+DevMode = true;
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
@@ -10,36 +10,42 @@ function createWindow() {
     show: false,
     webPreferences: {
       nodeIntegration: true,
+      enableRemoteModule: true,
       contextIsolation: false,
+      nodeIntegrationInWorker: true,
+      nodeIntegrationInSubFrames: true,
     },
     fullscreen: false,
     alwaysOnTop: true,
     autoHideMenuBar: true,
     resizable: false,
-    frame: DevMode, // Allow frame in dev mode for debugging
+    frame: DevMode, // Adjust based on your debugging needs
   });
 
   if (DevMode) {
     mainWindow.loadURL("http://localhost:3000");
     mainWindow.webContents.openDevTools();
   } else {
-    mainWindow.loadFile("./build/index.html");
+    mainWindow.loadFile(path.join(__dirname, "./build/index.html"));
   }
 
   mainWindow.once("ready-to-show", () => {
     mainWindow.show();
   });
+
   mainWindow.setPosition(0, 250);
 }
 
-app.whenReady().then(() => {
-  createWindow();
+app.on("ready", createWindow);
 
-  app.on("activate", function () {
-    if (BrowserWindow.getAllWindows().length === 0) createWindow();
-  });
+app.on("window-all-closed", () => {
+  if (process.platform !== "darwin") {
+    app.quit();
+  }
 });
 
-app.on("window-all-closed", function () {
-  if (process.platform !== "darwin") app.quit();
+app.on("activate", () => {
+  if (BrowserWindow.getAllWindows().length === 0) {
+    createWindow();
+  }
 });

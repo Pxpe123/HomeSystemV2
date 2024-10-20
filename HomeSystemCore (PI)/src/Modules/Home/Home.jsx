@@ -15,12 +15,6 @@ const apps = [
     isFunctional: false,
   },
   {
-    appName: "Gaming Hub",
-    givenPath: "/Game",
-    src: "https://img.icons8.com/?size=100&id=P74xrK8LVXNo&format=png&color=ffffff",
-    isFunctional: true,
-  },
-  {
     appName: "Wake On Lan",
     givenPath: "/WOL",
     src: "https://img.icons8.com/ios-filled/100/power-off-button.png",

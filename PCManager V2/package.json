@@ -1,0 +1,19 @@
+{
+  "name": "pcmanager-v2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "edge-js": "^22.9.0",
+    "win-audio": "^3.0.3",
+    "ws": "^8.18.0"
+  }
+}

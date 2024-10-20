@@ -1,0 +1,21 @@
+{
+  "notifications": {},
+  "prevApp": null,
+  "currentActivity": null,
+  "settings": {
+    "notifications": {
+      "DND": false,
+      "NotifyPos": "TopRight"
+    },
+    "Apps": {
+      "Spotify": {
+        "Enabled": true,
+        "Token": ""
+      },
+      "WOL": {
+        "Enabled": true,
+        "MacAddress": ""
+      }
+    }
+  }
+}

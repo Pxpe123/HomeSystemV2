@@ -1,105 +1,88 @@
-// SubApp.js
-import React, { useState, useEffect } from "react";
-import SpotifyWebApi from "spotify-web-api-js";
+// SpotifyPlayer.js
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Button, Slider, Grid, Typography } from "@mui/material";
-import "./Spotify.css";
 
-const spotifyApi = new SpotifyWebApi();
+const CLIENT_ID = "5cf13c1a5734406384e5f6ce468d21a1"; // Replace with your Client ID
+const REDIRECT_URI = "http://localhost:3000/callback"; // Your redirect URI
+const AUTH_URL = `https://accounts.spotify.com/authorize?client_id=${CLIENT_ID}&response_type=token&redirect_uri=${encodeURIComponent(
+  REDIRECT_URI
+)}&scope=user-read-private,user-read-email,playlist-read-private`;
 
-const SubApp = ({ accessToken }) => {
-  const [playlists, setPlaylists] = useState([]);
-  const [currentTrack, setCurrentTrack] = useState(null);
-  const [volume, setVolume] = useState(50);
+const SpotifyPlayer = () => {
+  const [accessToken, setAccessToken] = useState(null);
+  const [user, setUser] = useState(null);
 
+  // Parse the access token from the URL
+  useEffect(() => {
+    const hash = window.location.hash;
+    let token = window.localStorage.getItem("access_token");
+
+    if (!token && hash) {
+      token = hash.split("&")[0].split("=")[1];
+      window.location.hash = ""; // Clear the hash
+      window.localStorage.setItem("access_token", token);
+    }
+
+    setAccessToken(token);
+  }, []);
+
+  // Fetch user data from Spotify
   useEffect(() => {
     if (accessToken) {
-      spotifyApi.setAccessToken(accessToken);
-      fetchUserPlaylists();
-      fetchCurrentTrack();
+      axios
+        .get("https://api.spotify.com/v1/me", {
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+        })
+        .then((response) => {
+          setUser(response.data);
+        })
+        .catch((error) => console.error(error));
     }
   }, [accessToken]);
 
-  const fetchUserPlaylists = async () => {
-    try {
-      const response = await spotifyApi.getUserPlaylists();
-      setPlaylists(response.items);
-    } catch (error) {
-      console.error("Error fetching playlists", error);
-    }
+  const handleLogin = () => {
+    window.location.href = AUTH_URL;
   };
 
-  const fetchCurrentTrack = async () => {
-    try {
-      const response = await spotifyApi.getMyCurrentPlayingTrack();
-      setCurrentTrack(response.item);
-    } catch (error) {
-      console.error("Error fetching current track", error);
-    }
-  };
-
-  const handleNextTrack = async () => {
-    try {
-      await spotifyApi.skipToNext();
-      fetchCurrentTrack();
-    } catch (error) {
-      console.error("Error skipping to next track", error);
-    }
-  };
-
-  const handlePrevTrack = async () => {
-    try {
-      await spotifyApi.skipToPrevious();
-      fetchCurrentTrack();
-    } catch (error) {
-      console.error("Error skipping to previous track", error);
-    }
-  };
-
-  const handleVolumeChange = async (event, newValue) => {
-    setVolume(newValue);
-    try {
-      await spotifyApi.setVolume(newValue);
-    } catch (error) {
-      console.error("Error setting volume", error);
-    }
+  const handleLogout = () => {
+    setAccessToken(null);
+    setUser(null);
+    window.localStorage.removeItem("access_token");
   };
 
   return (
-    <div className="SubApp-Container">
-      <div className="Playlists">
-        <Typography variant="h6">Your Playlists</Typography>
-        <ul>
-          {playlists.map((playlist) => (
-            <li key={playlist.id}>{playlist.name}</li>
-          ))}
-        </ul>
-      </div>
-      <div className="Player">
-        {currentTrack && (
-          <>
-            <Typography variant="h6">Now Playing</Typography>
-            <Typography variant="subtitle1">{currentTrack.name}</Typography>
-            <Typography variant="subtitle2">
-              {currentTrack.artists.map((artist) => artist.name).join(", ")}
-            </Typography>
-            <div className="Controls">
-              <Button onClick={handlePrevTrack}>Previous</Button>
-              <Button onClick={handleNextTrack}>Next</Button>
-            </div>
-            <div className="VolumeControl">
-              <Typography variant="body1">Volume</Typography>
-              <Slider
-                value={volume}
-                onChange={handleVolumeChange}
-                aria-labelledby="volume-slider"
-              />
-            </div>
-          </>
-        )}
-      </div>
+    <div
+      style={{
+        padding: "20px",
+        backgroundColor: "#121212",
+        height: "100vh",
+        color: "#fff",
+      }}
+    >
+      <button
+        style={{
+          position: "absolute",
+          top: "20px",
+          left: "20px",
+          backgroundColor: "#1DB954",
+          border: "none",
+          color: "#fff",
+          padding: "10px 20px",
+          borderRadius: "20px",
+          cursor: "pointer",
+        }}
+        onClick={user ? handleLogout : handleLogin}
+      >
+        {user ? user.display_name : "Login"}
+      </button>
+
+      <h1>Spotify Music Player</h1>
+      {user && <p>Welcome, {user.display_name}!</p>}
+      {/* Add your music player components and features here */}
     </div>
   );
 };
 
-export default SubApp;
+export default SpotifyPlayer;

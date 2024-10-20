@@ -1,121 +1,43 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState } from "react";
 import "./SteelSeries.css";
-import debounce from "lodash/debounce";
+import "./SteelSeries.js";
 
 const SteelSeries = () => {
   const devices = [
     { name: "Master", key: "Master" },
-    {
-      name: "Game",
-      key: "SteelSeries Sonar - Gaming (SteelSeries Sonar Virtual Audio Device)",
-    },
-    {
-      name: "Chat",
-      key: "SteelSeries Sonar - Chat (SteelSeries Sonar Virtual Audio Device)",
-    },
-    {
-      name: "Media",
-      key: "SteelSeries Sonar - Media (SteelSeries Sonar Virtual Audio Device)",
-    },
-    {
-      name: "Aux",
-      key: "SteelSeries Sonar - Aux (SteelSeries Sonar Virtual Audio Device)",
-    },
-    {
-      name: "Microphone",
-      key: "SteelSeries Sonar - Microphone (SteelSeries Sonar Virtual Audio Device)",
-    },
+    { name: "Game", key: "Game Audio" },
+    { name: "Chat", key: "Chat Audio" },
+    { name: "Media", key: "Media Audio" },
+    { name: "Aux", key: "Aux Audio" },
+    { name: "Microphone", key: "Microphone Audio" },
   ];
 
   const [volumes, setVolumes] = useState(
     devices.reduce((acc, device) => {
-      acc[device.key] = 0;
+      acc[device.key] = 50; // Default volume
       return acc;
     }, {})
   );
 
   const [muted, setMuted] = useState(
     devices.reduce((acc, device) => {
-      acc[device.key] = false;
+      acc[device.key] = false; // Default unmuted
       return acc;
     }, {})
   );
 
-  const socketRef = useRef(null);
-
-  useEffect(() => {
-    const socket = new WebSocket("ws://localhost:30151");
-    socketRef.current = socket;
-
-    socket.onopen = () => {
-      console.log("WebSocket connection established.");
-      // Fetch audio data frequently
-      const intervalId = setInterval(() => {
-        const message = JSON.stringify({ Type: "GetAudioData" });
-        socket.send(message);
-      }, 250);
-
-      return () => clearInterval(intervalId);
-    };
-
-    socket.onmessage = (event) => {
-      const data = JSON.parse(event.data);
-      const newVolumes = { ...volumes };
-      const newMuted = { ...muted };
-
-      devices.forEach((device) => {
-        if (data[device.key]) {
-          newVolumes[device.key] = data[device.key].Volume;
-          newMuted[device.key] = data[device.key].isMuted;
-        }
-      });
-
-      setVolumes(newVolumes);
-      setMuted(newMuted);
-    };
-
-    socket.onerror = (error) => console.error("WebSocket error:", error);
-    socket.onclose = () => console.log("WebSocket connection closed.");
-
-    return () => {
-      socket.close();
-    };
-  }, []);
-
-  const handleVolumeChange = debounce((deviceKey, value) => {
+  const handleVolumeChange = (deviceKey, value) => {
     setVolumes((prevVolumes) => ({
       ...prevVolumes,
       [deviceKey]: value,
     }));
-
-    const message = JSON.stringify({
-      Type: "MusicData",
-      SetVolume: value,
-      DeviceName: deviceKey,
-    });
-    if (socketRef.current.readyState === WebSocket.OPEN) {
-      socketRef.current.send(message);
-    }
-  }, 100);
+  };
 
   const handleMuteToggle = (deviceKey) => {
-    setMuted((prevMuted) => {
-      const newMutedValue = !prevMuted[deviceKey];
-
-      const message = JSON.stringify({
-        Type: "MusicData",
-        SetMuted: deviceKey,
-        Muted: newMutedValue,
-      });
-      if (socketRef.current.readyState === WebSocket.OPEN) {
-        socketRef.current.send(message);
-      }
-
-      return {
-        ...prevMuted,
-        [deviceKey]: newMutedValue,
-      };
-    });
+    setMuted((prevMuted) => ({
+      ...prevMuted,
+      [deviceKey]: !prevMuted[deviceKey],
+    }));
   };
 
   return (
@@ -133,7 +55,6 @@ const SteelSeries = () => {
                 max="100"
                 value={volumes[device.key]}
                 className="slider-input"
-                style={{ transform: "rotate(-90deg)" }}
                 onChange={(e) =>
                   handleVolumeChange(device.key, parseInt(e.target.value, 10))
                 }
@@ -143,6 +64,15 @@ const SteelSeries = () => {
               <button
                 id={`${device.key}_Mute_Btn`}
                 onClick={() => handleMuteToggle(device.key)}
+                style={{
+                  backgroundColor: muted[device.key] ? "#d9534f" : "#05cf9c", // Red if muted, green if not
+                  color: "#fff", // Keep text color white for contrast
+                  borderRadius: "5px", // Ensure the button has rounded corners
+                  width: "80%", // Maintain consistent width
+                  height: "70%", // Maintain consistent height
+                  cursor: "pointer", // Pointer cursor
+                  transition: "background-color 0.3s ease", // Smooth transition for background color
+                }}
               >
                 {muted[device.key] ? "Unmute" : "Mute"}
               </button>

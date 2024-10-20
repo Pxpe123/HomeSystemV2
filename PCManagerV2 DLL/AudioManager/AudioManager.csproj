@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <Reference Include="NAudio" Version="2.2.1">
+            <HintPath>.\NAudio.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    
+    <ItemGroup>
+        <Reference Include="NAudio.Core" Version="2.2.1">
+            <HintPath>.\NAudio.Core.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="NAudio.Wasapi" Version="2.2.1">
+            <HintPath>.\NAudio.Wasapi.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="NAudio.WinMM" Version="2.2.1">
+            <HintPath>.\NAudio.WinMM.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Reference Include="NAudio.Asio" Version="2.2.1">
+            <HintPath>.\NAudio.Asio.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+
+</Project>

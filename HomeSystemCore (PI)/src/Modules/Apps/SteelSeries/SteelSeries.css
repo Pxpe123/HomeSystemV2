@@ -33,7 +33,7 @@
 
 .Slider-Item {
   background-color: var(--ss-third-color);
-  width: 18%; /* Set a fixed width for slider items */
+  width: 15%; /* Set a fixed width for slider items */
   height: 90%;
   margin: auto auto;
   border-radius: 5px;
@@ -88,8 +88,33 @@
 }
 
 .Slider-Item-Bottom {
-  height: 10%;
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  align-items: center; /* Center the button vertically */
+  height: 10%; /* Maintain height */
   width: 100%;
+}
+
+.Slider-Item-Bottom button {
+  width: 80%; /* Wider button for better touch target */
+  height: 70%; /* Adjusted height for aesthetics */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  background-color: #05cf9c; /* Original color */
+  color: #fff; /* White text for contrast */
+  font-size: 16px; /* Increase font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.1s ease; /* Smooth transitions */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.Slider-Item-Bottom button:hover {
+  background-color: #04b185; /* Darker shade on hover */
+  transform: translateY(-1px); /* Slight lift effect */
+}
+
+.Slider-Item-Bottom button:active {
+  transform: translateY(1px); /* Push down effect on click */
 }
 
 .slider-input {
